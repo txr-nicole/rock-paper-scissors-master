@@ -2,18 +2,22 @@
   font-family: "Barlow Semi Condensed", sans-serif;
   margin: 0;
   padding: 0;
+  
 }
+
 body {
   background: radial-gradient(#1f3756, #141539);
-  /* width: 100vw;
-  height: 100vh; */
   box-sizing: border-box;
 }
 
 .container {
-  width: 700px;
+  max-width: 43.7rem;
   margin: 0 auto;
-  height: 700px;
+  height: 43.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
 }
 
 header {
@@ -23,13 +27,16 @@ header {
   border: 1px solid white;
   border-radius: 10px;
   padding: 1.1rem;
-  margin: 10px;
+  margin: 1.8rem .6rem ;
+  
 }
-
+.logo{
+  width: 10rem;
+}
 .score {
   background: white;
-  width: 150px;
-  height: 100px;
+  width: 8.5rem;
+  height: 6.25rem;
   color: #141539;
   border-radius: 10px;
   text-align: center;
@@ -45,77 +52,75 @@ header {
 }
 
 .score-number {
-  font-size: 65px;
+  font-size: 4rem;
   font-weight: bold;
   color: hsl(229, 25%, 31%);
   margin-top: 0.3rem;
 }
 
-main{
-    background-image: url(../images/bg-triangle.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
+main {
+  background-image: url(../images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 28.1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
 }
-.cima{
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    width: 100%;
+.cima {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
 }
 
 .baixo {
-    margin-bottom: 50px;
+  margin-bottom: 3.1rem;
 }
 
 .game {
-  width: 110px;
-  height: 110px;
+  width: 6.875rem;
+  height: 6.875rem;
   background-color: rgb(255, 255, 255);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  border: solid 15px ;
-  
- 
+  border: solid 15px;
+}
+.game img{
+  width: 3.1rem;
+}
+.rock {
+  /* margin: -40px 0 0 280px; */
+  border-color: hsl(349, 71%, 52%);
+  box-shadow: inset 0px .6rem 0px 0px rgba(0, 0, 0, 0.16),
+    0px 6px 0px 0px hsla(349, 65%, 46%, 0.9);
 }
 
-.rock{
-    /* margin: -40px 0 0 280px; */
-    border-color: hsl(349, 71%, 52%);
-    box-shadow: inset 0px 10px 0px 0px rgba(0,0,0,0.16), 0px 6px 0px 0px  hsla(349, 65%, 46%, 0.9);
-    
+.paper {
+  border-color: hsl(230, 89%, 62%);
+  box-shadow: inset 0px .6rem 0px 0px rgba(0, 0, 0, 0.16),
+    0px 6px 0px 0px hsla(230, 92%, 59%, 0.9);
 }
-
-.paper{
-    /* position: absolute;
-    left: 560px;
-    top: 220px; */
-    /* margin: px 0 0 0; */
-    border-color: hsl(230, 89%, 62%);
-    box-shadow: inset 0px 10px 0px 0px rgba(0,0,0,0.16), 0px 6px 0px 0px  hsla(230, 92%, 59%, 0.90) ;
-}
-.scissors{
-    /* position: absolute;
-    right: 560px;
-    top: 220px; */
-    /* margin: -80px 0 0 390px; */
-    border-color: hsl(39, 89%, 49%);
-    box-shadow: inset 0px 10px 0px 0px rgba(0,0,0,0.16), 0px 6px 0px 0px hsla(39, 87%, 41%, 0.9) ;
+.scissors {
+  border-color: hsl(39, 89%, 49%);
+  box-shadow: inset 0px .6rem 0px 0px rgba(0, 0, 0, 0.16),
+    0px 6px 0px 0px hsla(39, 87%, 41%, 0.9);
 }
 .rules {
+  width: 7.7rem;
+  height: 2.5rem;
   position: absolute;
   right: 35px;
   bottom: 15px;
-  padding: 10px 40px;
+    /* padding: 10px 40px; */
+
+  /* padding: 10px 40px; */
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -132,7 +137,7 @@ main{
 }
 
 .attribution {
-  font-size: 19px;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -154,4 +159,38 @@ main{
 
 .open {
   display: block;
+}
+
+@media (max-width: 720px) {
+    html{
+      font-size: 87.5%; /*14px*/
+    }
+    
+  }
+
+@media (max-width: 1080px) {
+  html{
+    font-size: 93.75%; /* 15px*/
+  }
+  }
+@media (max-width: 450px){
+  html{
+    font-size: 75%;
+  }
+  main{
+    /* margin-top: 5rem; */
+    background-size: 19rem;
+  }
+  .rules{
+    position:static;
+    height: 41px;
+    width:124px;
+    align-self: center;
+    font-size: 110%;
+
+
+  }
+  .attribution{
+    font-size: 1.5rem;
+  }
 }
