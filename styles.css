@@ -181,9 +181,12 @@ main {
     /* margin-top: 5rem; */
     background-size: 19rem;
   }
+  .container{
+    height: 700px;
+  }
   .rules{
     position:static;
-    height: 41px;
+    min-height: 41px;
     width:124px;
     align-self: center;
     font-size: 110%;
